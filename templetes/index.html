@@ -63,83 +63,15 @@
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
-                  data-bs-target="#loginModal">Login as customer</a></li>
+                  data-bs-target="#loginModal">Login </a></li>
                 <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
-                  data-bs-target="#signupModal">Signup as customer</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                  data-bs-target="#loginModalManager">Login as Manager</a>
-                  <a class="dropdown-item" href="#" data-bs-toggle="modal"
-                  data-bs-target="#loginModalGuard">Login as Security</a>
-                </li>
+                  data-bs-target="#signupModal">Signup </a></li>
               </ul>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-
-    <!-- NAV BAR
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <span class="navbar-brand">Shoply</span>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#" target="_self"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#a1" target="_self">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" style="cursor: pointer" onclick="clicks()"
-                >FAQ</a
-              >
-              <script>
-                function clicks() {
-                  alert("Comming soon");
-                }
-              </script>
-            </li>
-          </ul>
-          <form class="d-flex">
-            <button
-              style="margin-left: 1em; margin-right: 1em"
-              type="button"
-              class="btn btn-danger mx-2"
-              data-bs-toggle="modal"
-              data-bs-target="#loginModal"
-            >
-              Login
-            </button>
-            <button
-              style="margin-left: 1em; margin-right: 1em"
-              type="button"
-              class="btn btn-danger"
-              data-bs-toggle="modal"
-              data-bs-target="#signupModal"
-            >
-              Signup
-            </button>
-          </form>
-        </div>
-      </div>
-    </nav> -->
 
     <!--Login Modal -->
     <div
@@ -199,114 +131,6 @@
           >
             SignUp
           </button>
-        </div>
-      </div>
-    </div>
-
-    <!--Login Modal for manager -->
-    <div
-      class="modal fade"
-      id="loginModalManager"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabelManager">Login</h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label"
-                >Email address</label
-              >
-              <input
-                type="email"
-                class="form-control"
-                id="exampleFormControlInput1Manager"
-                placeholder="name@example.com"
-              />
-            </div>
-            <label for="inputPassword5" class="form-label">Password</label>
-            <input
-              type="password"
-              id="inputPassword5Manager"
-              class="form-control"
-              aria-describedby="passwordHelpBlock"
-            />
-            <div id="passwordHelpBlockManager" class="form-text"></div>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">Login</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!--Login Modal for Guard -->
-    <div
-      class="modal fade"
-      id="loginModalGuard"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabelGuard">Login</h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label"
-                >Email address</label
-              >
-              <input
-                type="email"
-                class="form-control"
-                id="exampleFormControlInput1Guard"
-                placeholder="name@example.com"
-              />
-            </div>
-            <label for="inputPassword5" class="form-label">Password</label>
-            <input
-              type="password"
-              id="inputPassword5Guard"
-              class="form-control"
-              aria-describedby="passwordHelpBlock"
-            />
-            <div id="passwordHelpBlockGuard" class="form-text"></div>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">Login</button>
-          </div>
         </div>
       </div>
     </div>
