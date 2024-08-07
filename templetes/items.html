@@ -91,7 +91,7 @@
           </ul>
           <form class="d-flex">
             <a
-              href="https://ojasvi886.github.io/Sparkathon_Repo/templetes/cart.html"
+              href= '{{ url_for('cart') }}'
             >
               <img
                 src="cart upload.png"
@@ -120,29 +120,38 @@
     <!-- body -->
 
     <div class="album py-5 bg-body-tertiary">
+
       <div class="container">
+
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5">
+          {% for item in items: %}
           <div class="col">
             <!-- enter image and its Description -->
 
             <div class="card shadow-sm">
               <img src="#" alt="prod 1" width="100%" height="225" />
               <div class="card-body">
-                <h5 class="card-text">Product Description .</h5>
+                <h5 class="card-text">{{ item.name }}</h5>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                     <button
                       id="addToCartButton1"
+                      onclick="click()"
                       style="
                         margin: 2em;
                         background-color: black;
                         color: aliceblue;
                         border-radius: 10%;
                       "
+
                     >
                       Add to Cart
                     </button>
                     <script>
+                      function click()
+                      {
+                        alert("Item added to cart");
+                      }
                       document
                         .getElementById("addToCartButton1")
                         .addEventListener("click", function () {
@@ -167,369 +176,7 @@
               </div>
             </div>
           </div>
-          <div class="col">
-            <!-- enter image and its Description -->
-
-            <div class="card shadow-sm">
-              <img src="#" alt="prod 2" width="100%" height="225" />
-              <div class="card-body">
-                <h5 class="card-text">Product Description .</h5>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button
-                      id="addToCartButton2"
-                      style="
-                        margin: 2em;
-                        background-color: black;
-                        color: aliceblue;
-                        border-radius: 10%;
-                      "
-                    >
-                      Add to Cart
-                    </button>
-                    <script>
-                      document
-                        .getElementById("addToCartButton2")
-                        .addEventListener("click", function () {
-                          const addToCartButton =
-                            document.getElementById("addToCartButton2");
-                          // Create the quantity buttons
-                          const quantityDiv = document.createElement("div");
-                          quantityDiv.className = "quantity-buttons";
-
-                          const mButton = document.createElement("button");
-                          mButton.textContent = "Go to cart";
-                          mButton.addEventListener("click", function () {
-                            window.location.href =
-                              "https://ojasvi886.github.io/Sparkathon_Repo/templetes/cart.html";
-                          });
-                          quantityDiv.appendChild(mButton);
-                          addToCartButton.replaceWith(quantityDiv);
-                        });
-                    </script>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <!-- enter image and its Description -->
-
-            <div class="card shadow-sm">
-              <img src="#" alt="prod 3" width="100%" height="225" />
-              <div class="card-body">
-                <h5 class="card-text">Product Description .</h5>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button
-                      id="addToCartButton3"
-                      style="
-                        margin: 2em;
-                        background-color: black;
-                        color: aliceblue;
-                        border-radius: 10%;
-                      "
-                    >
-                      Add to Cart
-                    </button>
-                    <script>
-                      document
-                        .getElementById("addToCartButton3")
-                        .addEventListener("click", function () {
-                          const addToCartButton =
-                            document.getElementById("addToCartButton3");
-                          // Create the quantity buttons
-                          const quantityDiv = document.createElement("div");
-                          quantityDiv.className = "quantity-buttons";
-
-                          const mButton = document.createElement("button");
-                          mButton.textContent = "Go to cart";
-                          mButton.addEventListener("click", function () {
-                            window.location.href =
-                              "https://ojasvi886.github.io/Sparkathon_Repo/templetes/cart.html";
-                          });
-                          quantityDiv.appendChild(mButton);
-                          addToCartButton.replaceWith(quantityDiv);
-                        });
-                    </script>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <!-- enter image and its Description -->
-
-            <div class="card shadow-sm">
-              <img src="#" alt="prod 4" width="100%" height="225" />
-              <div class="card-body">
-                <h5 class="card-text">Product Description .</h5>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button
-                      id="addToCartButton4"
-                      style="
-                        margin: 2em;
-                        background-color: black;
-                        color: aliceblue;
-                        border-radius: 10%;
-                      "
-                    >
-                      Add to Cart
-                    </button>
-                    <script>
-                      document
-                        .getElementById("addToCartButton4")
-                        .addEventListener("click", function () {
-                          const addToCartButton =
-                            document.getElementById("addToCartButton4");
-                          // Create the quantity buttons
-                          const quantityDiv = document.createElement("div");
-                          quantityDiv.className = "quantity-buttons";
-
-                          const mButton = document.createElement("button");
-                          mButton.textContent = "Go to cart";
-                          mButton.addEventListener("click", function () {
-                            window.location.href =
-                              "https://ojasvi886.github.io/Sparkathon_Repo/templetes/cart.html";
-                          });
-                          quantityDiv.appendChild(mButton);
-                          addToCartButton.replaceWith(quantityDiv);
-                        });
-                    </script>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <!-- enter image and its Description -->
-
-            <div class="card shadow-sm">
-              <img src="#" alt="prod 5" width="100%" height="225" />
-              <div class="card-body">
-                <h5 class="card-text">Product Description .</h5>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button
-                      id="addToCartButton5"
-                      style="
-                        margin: 2em;
-                        background-color: black;
-                        color: aliceblue;
-                        border-radius: 10%;
-                      "
-                    >
-                      Add to Cart
-                    </button>
-                    <script>
-                      document
-                        .getElementById("addToCartButton5")
-                        .addEventListener("click", function () {
-                          const addToCartButton =
-                            document.getElementById("addToCartButton5");
-                          // Create the quantity buttons
-                          const quantityDiv = document.createElement("div");
-                          quantityDiv.className = "quantity-buttons";
-
-                          const mButton = document.createElement("button");
-                          mButton.textContent = "Go to cart";
-                          mButton.addEventListener("click", function () {
-                            window.location.href =
-                              "https://ojasvi886.github.io/Sparkathon_Repo/templetes/cart.html";
-                          });
-                          quantityDiv.appendChild(mButton);
-                          addToCartButton.replaceWith(quantityDiv);
-                        });
-                    </script>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <!-- enter image and its Description -->
-
-            <div class="card shadow-sm">
-              <img src="#" alt="prod 6" width="100%" height="225" />
-              <div class="card-body">
-                <h5 class="card-text">Product Description .</h5>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button
-                      id="addToCartButton6"
-                      style="
-                        margin: 2em;
-                        background-color: black;
-                        color: aliceblue;
-                        border-radius: 10%;
-                      "
-                    >
-                      Add to Cart
-                    </button>
-                    <script>
-                      document
-                        .getElementById("addToCartButton6")
-                        .addEventListener("click", function () {
-                          const addToCartButton =
-                            document.getElementById("addToCartButton6");
-                          // Create the quantity buttons
-                          const quantityDiv = document.createElement("div");
-                          quantityDiv.className = "quantity-buttons";
-
-                          const mButton = document.createElement("button");
-                          mButton.textContent = "Go to cart";
-                          mButton.addEventListener("click", function () {
-                            window.location.href =
-                              "https://ojasvi886.github.io/Sparkathon_Repo/templetes/cart.html";
-                          });
-                          quantityDiv.appendChild(mButton);
-                          addToCartButton.replaceWith(quantityDiv);
-                        });
-                    </script>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <!-- enter image and its Description -->
-
-            <div class="card shadow-sm">
-              <img src="#" alt="prod 7" width="100%" height="225" />
-              <div class="card-body">
-                <h5 class="card-text">Product Description .</h5>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button
-                      id="addToCartButton7"
-                      style="
-                        margin: 2em;
-                        background-color: black;
-                        color: aliceblue;
-                        border-radius: 10%;
-                      "
-                    >
-                      Add to Cart
-                    </button>
-                    <script>
-                      document
-                        .getElementById("addToCartButton7")
-                        .addEventListener("click", function () {
-                          const addToCartButton =
-                            document.getElementById("addToCartButton7");
-                          // Create the quantity buttons
-                          const quantityDiv = document.createElement("div");
-                          quantityDiv.className = "quantity-buttons";
-
-                          const mButton = document.createElement("button");
-                          mButton.textContent = "Go to cart";
-                          mButton.addEventListener("click", function () {
-                            window.location.href =
-                              "https://ojasvi886.github.io/Sparkathon_Repo/templetes/cart.html";
-                          });
-                          quantityDiv.appendChild(mButton);
-                          addToCartButton.replaceWith(quantityDiv);
-                        });
-                    </script>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <!-- enter image and its Description -->
-
-            <div class="card shadow-sm">
-              <img src="#" alt="prod 8" width="100%" height="225" />
-              <div class="card-body">
-                <h5 class="card-text">Product Description .</h5>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button
-                      id="addToCartButton8"
-                      style="
-                        margin: 2em;
-                        background-color: black;
-                        color: aliceblue;
-                        border-radius: 10%;
-                      "
-                    >
-                      Add to Cart
-                    </button>
-                    <script>
-                      document
-                        .getElementById("addToCartButton8")
-                        .addEventListener("click", function () {
-                          const addToCartButton =
-                            document.getElementById("addToCartButton8");
-                          // Create the quantity buttons
-                          const quantityDiv = document.createElement("div");
-                          quantityDiv.className = "quantity-buttons";
-
-                          const mButton = document.createElement("button");
-                          mButton.textContent = "Go to cart";
-                          mButton.addEventListener("click", function () {
-                            window.location.href =
-                              "https://ojasvi886.github.io/Sparkathon_Repo/templetes/cart.html";
-                          });
-                          quantityDiv.appendChild(mButton);
-                          addToCartButton.replaceWith(quantityDiv);
-                        });
-                    </script>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <!-- enter image and its Description -->
-
-            <div class="card shadow-sm">
-              <img src="#" alt="prod 9" width="100%" height="225" />
-              <div class="card-body">
-                <h5 class="card-text">Product Description .</h5>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button
-                      id="addToCartButton9"
-                      style="
-                        margin: 2em;
-                        background-color: black;
-                        color: aliceblue;
-                        border-radius: 10%;
-                      "
-                    >
-                      Add to Cart
-                    </button>
-                    <script>
-                      document
-                        .getElementById("addToCartButton9")
-                        .addEventListener("click", function () {
-                          const addToCartButton =
-                            document.getElementById("addToCartButton9");
-                          // Create the quantity buttons
-                          const quantityDiv = document.createElement("div");
-                          quantityDiv.className = "quantity-buttons";
-
-                          const mButton = document.createElement("button");
-                          mButton.textContent = "Go to cart";
-                          mButton.addEventListener("click", function () {
-                            window.location.href =
-                              "https://ojasvi886.github.io/Sparkathon_Repo/templetes/cart.html";
-                          });
-                          quantityDiv.appendChild(mButton);
-                          addToCartButton.replaceWith(quantityDiv);
-                        });
-                    </script>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+          {% endfor %}
 
     <!-- FOOTER -->
 
