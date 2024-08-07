@@ -136,7 +136,7 @@
                   <div class="btn-group">
                     <button
                       id="addToCartButton1"
-                      onclick="click()"
+                      onclick="clicks()"
                       style="
                         margin: 2em;
                         background-color: black;
@@ -148,10 +148,11 @@
                       Add to Cart
                     </button>
                     <script>
-                      function click()
-                      {
-                        alert("Item added to cart");
+                      function clicks() {
+                        alert("Item added to cart!!");
                       }
+                    </script>
+                    <script>
                       document
                         .getElementById("addToCartButton1")
                         .addEventListener("click", function () {
