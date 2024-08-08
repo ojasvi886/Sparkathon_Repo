@@ -135,7 +135,7 @@
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                     <button
-                      id="addToCartButton1"
+                      id="addToCartButton2"
                       onclick="clicks()"
                       style="
                         margin: 2em;
@@ -152,26 +152,54 @@
                         alert("Item added to cart!!");
                       }
                     </script>
-                    <!-- <script>
+                    
+                    <script>
                       document
-                        .getElementById("addToCartButton1")
+                        .getElementById("addToCartButton2")
                         .addEventListener("click", function () {
                           const addToCartButton =
-                            document.getElementById("addToCartButton1");
+                            document.getElementById("addToCartButton2");
                           // Create the quantity buttons
                           const quantityDiv = document.createElement("div");
                           quantityDiv.className = "quantity-buttons";
-
-                          const mButton = document.createElement("button");
-                          mButton.textContent = "Go to cart";
-                          mButton.addEventListener("click", function () {
-                            window.location.href =
-                              "https://ojasvi886.github.io/Sparkathon_Repo/templetes/cart.html";
+                    
+                          const minusButton = document.createElement("button");
+                          minusButton.textContent = "-";
+                          minusButton.addEventListener("click", function () {
+                            if (quantity > 1) {
+                              quantity--;
+                              quantitySpan.textContent = quantity;
+                            }
                           });
-                          quantityDiv.appendChild(mButton);
+                    
+                          const quantitySpan = document.createElement("span");
+                          let quantity = 1;
+                          quantitySpan.textContent = quantity;
+                    
+                          const plusButton = document.createElement("button");
+                          plusButton.textContent = "+";
+                          plusButton.addEventListener("click", function () {
+                            quantity++;
+                            quantitySpan.textContent = quantity;
+                          });
+                    
+                          quantityDiv.appendChild(minusButton);
+                          quantityDiv.appendChild(quantitySpan);
+                          quantityDiv.appendChild(plusButton);
+                    
+                          // Replace the "Add to Cart" button with the quantity buttons
+                    
                           addToCartButton.replaceWith(quantityDiv);
+                    
+                          minusButton.addEventListener("click", function () {
+                            if (quantity == 1) {
+                              quantityDiv.replaceWith(addToCartButton);
+                            }
+                          });
                         });
-                    </script> -->
+                    </script>
+
+
                   </div>
                 </div>
               </div>
@@ -194,3 +222,6 @@
     ></script>
   </body>
 </html>
+
+
+
